@@ -1,0 +1,83 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} 
+.menu {
+  background: #000000;
+  margin: 210px 0 50px;
+  padding: 2px 60px;
+}
+.menu.gradient {
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 127.92%);
+}
+.menu-list {
+  text-align: right;
+}
+.menu-list-item {
+  display: inline-block;
+  vertical-align: top;
+  background: #FFFFFF;
+  position: relative;
+  margin: 0 22px 0;
+}
+.menu-list-link {
+  font: 32px/37px Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 30px 25px 29px;
+  display: inline-block;
+  vertical-align: top;
+}
+.menu-list-link:after {
+  content:"";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 48px 0 48px 25px;
+  border-color: transparent transparent transparent #ffffff; 
+}
+.menu-list-link:before {
+  content:"";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  margin-top: -48px;
+  border-width: 48px 0 48px 25px;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  left: -25px;
+}
+.menu-list-item:hover {
+  background: #cccccc;
+  }
+.menu-list-item:hover .menu-list-link:hover:after {
+  border-color: transparent transparent transparent #cccccc;
+}
+.menu-list-item a:hover::before {
+  border-color: #cccccc #cccccc #cccccc transparent;
+}
+.gradient .menu-list-item:hover {
+  background: rgba(204, 204, 204, 0.7);
+}
+.gradient .menu-list-item:hover .menu-list-link:hover:after {
+  border-color: transparent transparent transparent rgba(204, 204, 204, 0.7);
+}
+.gradient .menu-list-item a:hover:before {
+  border-color: rgba(204, 204, 204, 0.7) rgba(204, 204, 204, 0.7) rgba(204, 204, 204, 0.7) transparent;
+}
